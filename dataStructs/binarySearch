@@ -1,0 +1,63 @@
+def binarySearchIT(list:list,x):
+    """
+    list: ORDERED list
+    x: parameter to look for
+
+    return: 
+        position of x in list
+
+    complexity: 
+        time: O(Log n) 
+        space: O(n)
+    """
+    # Exceptions: 
+    if len(list) == 0: 
+        return -1
+    mid = len(list) // 2 
+    while 0 <= mid <= len(list)-1:
+        
+        if x < list[mid]: 
+            mid = mid// 2
+        elif x > list[mid]:
+            mid = mid + mid// 2
+        elif x == list[mid]: 
+            return mid 
+    return -1
+
+def binarySearchR(list:list,x):
+
+    """
+    list: ORDERED list
+    x: parameter to look for
+
+    return: 
+        if x is in the list
+
+    exceptions: 
+        len(list) == 0 : Return -1
+
+    complexity: 
+        time: O(Log n) 
+        space: O(n)
+
+    """
+
+    mid = len(list)//2
+    # Base cases
+    if len(list) <= 0 or mid >= len(list)-1: # CHECK
+        return False
+    elif list[mid] == x: 
+        return True
+
+    # Recursive cases
+    elif list[mid] > x: 
+        return binarySearchR(list[:mid],x)
+    elif list[mid] < x: 
+        return binarySearchR(list[mid:],x)
+    
+
+# TESTING: 
+list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+x = 7
+print(f"binarySearchR: {binarySearchR(list,x)}")
+print(f"binarySearchIT: {binarySearchIT(list, x)}")
