@@ -1,4 +1,4 @@
-from graphs import adjacentListGraph
+from dataStructs/graphs import adjacentListGraph
 import time
 
  
