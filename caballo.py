@@ -1,5 +1,7 @@
-from dataStructs/graphs import adjacentListGraph
 import time
+from dataStructs.graphs import adjacentListGraph
+
+
 
  
 class BoardGraph(adjacentListGraph): 
@@ -39,6 +41,13 @@ def main():
     jumps = Chessboard.computeHorseJumpsR(3)
     print(jumps)
     print(len(jumps)) 
+
+    #Check all the jumps are valid and different
+    for i in range(len(jumps)):
+        for j in range(i+1,len(jumps)):
+            if jumps[i] == jumps[j]:
+                print("Error: repeated jump")
+
     
         
 start_time = time.time()
