@@ -1,23 +1,26 @@
 import time
 from dataStructs.graphs import adjacentListGraph
+import sys
+sys.setrecursionlimit(10000)
 
-
+import math
 
  
 class BoardGraph(adjacentListGraph): 
     def __init__(self,vertices):
         super().__init__(vertices)
-        self._visited = [False for i in range(64)]
+        self._visited = [False for i in range(len(self._vertices))]
         
     def computeHorseAdjacents(self,v:int):
-        self.addEdge(v,v+8-2)
-        self.addEdge(v,v+8+2)
-        self.addEdge(v,v+16-1)
-        self.addEdge(v,v-8-2)
-        self.addEdge(v,v-8+2)
-        self.addEdge(v,v-16+1)
-        self.addEdge(v,v-16-1)
-        self.addEdge(v,v+16+1)
+        self.addEdge(v,v+int(math.sqrt(len(self._vertices)))-1)
+        self.addEdge(v,v+int(math.sqrt(len(self._vertices)))-2)
+        self.addEdge(v,v+int(math.sqrt(len(self._vertices)))+2)
+        self.addEdge(v,v+int(math.sqrt(len(self._vertices)))+1)
+        self.addEdge(v,v-int(math.sqrt(len(self._vertices)))-2)
+        self.addEdge(v,v-int(math.sqrt(len(self._vertices)))+2)
+        self.addEdge(v,v-int(math.sqrt(len(self._vertices)))+1)
+        self.addEdge(v,v-int(math.sqrt(len(self._vertices)))-1)
+        
     
     def computeHorseJumpsR(self,v:int,out = []): 
         """
@@ -37,7 +40,7 @@ class BoardGraph(adjacentListGraph):
 
 
 def main():
-    Chessboard = BoardGraph([i for i in range(64)])
+    Chessboard = BoardGraph([i for i in range(10000)])
     jumps = Chessboard.computeHorseJumpsR(3)
     print(jumps)
     print(len(jumps)) 
