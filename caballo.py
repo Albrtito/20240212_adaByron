@@ -1,9 +1,10 @@
 import time
+import math
 from dataStructs.graphs import adjacentListGraph
 import sys
-sys.setrecursionlimit(10000)
+sys.setrecursionlimit(1000000)
 
-import math
+
 
  
 class BoardGraph(adjacentListGraph): 
@@ -40,10 +41,12 @@ class BoardGraph(adjacentListGraph):
 
 
 def main():
-    Chessboard = BoardGraph([i for i in range(10000)])
+    
+    Chessboard = BoardGraph([i for i in range(1000000)])
     jumps = Chessboard.computeHorseJumpsR(3)
-    print(jumps)
-    print(len(jumps)) 
+    #print(jumps)
+    #print(len(jumps)) 
+
     """
     #Check all the jumps are valid and different
     for i in range(len(jumps)):
@@ -52,7 +55,7 @@ def main():
                 print("Error: repeated jump")
     """
     
-        
+
 start_time = time.time()
 main()
 print("--- %s seconds ---" % (time.time() - start_time))
