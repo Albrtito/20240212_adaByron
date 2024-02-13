@@ -10,16 +10,16 @@ class BoardGraph(adjacentListGraph):
     def __init__(self,vertices):
         super().__init__(vertices)
         self._visited = [False for i in range(len(self._vertices))]
-        
+        self._n = int(math.sqrt(len(self._vertices)))
     def computeHorseAdjacents(self,v:int):
-        self.addEdge(v,v+int(math.sqrt(len(self._vertices)))-1)
-        self.addEdge(v,v+int(math.sqrt(len(self._vertices)))-2)
-        self.addEdge(v,v+int(math.sqrt(len(self._vertices)))+2)
-        self.addEdge(v,v+int(math.sqrt(len(self._vertices)))+1)
-        self.addEdge(v,v-int(math.sqrt(len(self._vertices)))-2)
-        self.addEdge(v,v-int(math.sqrt(len(self._vertices)))+2)
-        self.addEdge(v,v-int(math.sqrt(len(self._vertices)))+1)
-        self.addEdge(v,v-int(math.sqrt(len(self._vertices)))-1)
+        self.addEdge(v,v+self._n-1)
+        self.addEdge(v,v+self._n-2)
+        self.addEdge(v,v+self._n+2)
+        self.addEdge(v,v+self._n+1)
+        self.addEdge(v,v-self._n-2)
+        self.addEdge(v,v-self._n+2)
+        self.addEdge(v,v-self._n+1)
+        self.addEdge(v,v-self._n-1)
         
     
     def computeHorseJumpsR(self,v:int,out = []): 
@@ -44,13 +44,13 @@ def main():
     jumps = Chessboard.computeHorseJumpsR(3)
     print(jumps)
     print(len(jumps)) 
-
+    """
     #Check all the jumps are valid and different
     for i in range(len(jumps)):
         for j in range(i+1,len(jumps)):
             if jumps[i] == jumps[j]:
                 print("Error: repeated jump")
-
+    """
     
         
 start_time = time.time()
