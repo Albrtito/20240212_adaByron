@@ -28,6 +28,10 @@ class BoardGraph(adjacentListGraph):
         Recursive function
         v: initial position of the horse
         """
+        if self._n <= 3: 
+            print("The board is too small")
+            return
+        
         self.computeHorseAdjacents(v)
         self._visited[v] = True
         out.append(v)

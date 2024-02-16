@@ -10,8 +10,8 @@
 import time
 import sys
 
-#sys.setrecursionlimit(16000) # Hay que modificar el límite de recursion para N mayores que 20 mas o menos
-N = 2 # Constante N, que define el tamaño del tablero nxn 
+sys.setrecursionlimit(16000) # Hay que modificar el límite de recursion para N mayores que 20 mas o menos
+N = 1000 # Constante N, que define el tamaño del tablero nxn 
 
 # Funcion que sirve para establecer los valores iniciales para luego usar la busqueda
 def busqueda_profundidad(grafo: dict) -> list:
