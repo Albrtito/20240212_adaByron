@@ -1,3 +1,2 @@
-import math
-print(math.sqrt(4)%1)
-
+list = ["hola", "hola", "adios"]
+print(list.index("hola"))
