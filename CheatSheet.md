@@ -3,6 +3,8 @@ geometry: "margin=0.5in"
 fontsize: "10pt"
 ---
 
+## Indice
+
 ## Estructuras de datos
 
 ### C++
@@ -272,29 +274,28 @@ fontsize: "10pt"
 
 `string_name = ""`
 
-| Método                   | Complejidad Promedio | Descripción                                                                                                                                                                                                    |
-| ------------------------ | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `len(str)`               | O(1)                 | Devuelve la longitud de la cadena.                                                                                                                                                                             |
-| `str.lower()`            | O(n)                 | Devuelve una copia de la cadena en minúsculas.                                                                                                                                                                 |
-| `str.upper()`            | O(n)                 | Devuelve una copia de la cadena en mayúsculas.                                                                                                                                                                 |
-| `str.capitalize()`       | O(1)                 | Devuelve una copia de la cadena con la primera letra en mayúscula.                                                                                                                                             |
-| `str.title()`            | O(n)                 | Devuelve una copia de la cadena con cada palabra en mayúscula.                                                                                                                                                 |
-| `str.strip()`            | O(n)                 | Elimina los espacios en blanco al principio y al final de la cadena.                                                                                                                                           |
-| `str.lstrip()`           | O(n)                 | Elimina los espacios en blanco al principio de la cadena.                                                                                                                                                      |
-| `str.rstrip()`           | O(n)                 | Elimina los espacios en blanco al final de la cadena.                                                                                                                                                          |
-| `str.startswith(prefix)` | O(p)                 | Verifica si la cadena comienza con el prefijo dado (p es la longitud del prefijo).                                                                                                                             |
-| `str.endswith(suffix)`   | O(s)                 | Verifica si la cadena termina con el sufijo dado (s es la longitud del sufijo).                                                                                                                                |
-| `str.find(substring)`    | O(n)                 | Busca la primera aparición de la subcadena y devuelve la posición, o -1 si no se encuentra.                                                                                                                    |
-| `str.replace(old, new)`  | O(n + m)             | Reemplaza todas las ocurrencias de la subcadena antigua con la nueva (n es la longitud de la cadena, m es el número de ocurrencias).                                                                           |
-| `str.split(sep)`         | O(n)                 | Divide la cadena en una lista de subcadenas usando el separador dado.                                                                                                                                          |
-| `str.join(iterable)`     | O(m + n\*k)          | Concatena las cadenas de un iterable utilizando la cadena como separador (m es la longitud de la cadena, n es el número de elementos en el iterable, k es la longitud promedio de las cadenas en el iterable). |
-| `str.isalpha()`          | O(n)                 | Devuelve `True` si todos los caracteres de la cadena son letras.                                                                                                                                               |
-| `str.isdigit()`          | O(n)                 | Devuelve `True` si todos los caracteres de la cadena son dígitos.                                                                                                                                              |
-| `str.isalnum()`          | O(n)                 | Devuelve `True` si todos los caracteres de la cadena son alfanuméricos.                                                                                                                                        |
-| `str.islower()`          | O(n)                 | Devuelve `True` si todos los caracteres de la cadena están en minúsculas.                                                                                                                                      |
-| `str.isupper()`          | O(n)                 | Devuelve `True` si todos los caracteres de la cadena están en mayúsculas.                                                                                                                                      |
-| `str.capitalize()`       | O(n)                 | Devuelve una copia de la cadena con la primera letra en mayúscula.                                                                                                                                             |
-| `str.count(substring)`   | O(n + m)             | Cuenta el número de ocurrencias de la subcadena en la cadena (n es la longitud de la cadena, m es el número de ocurrencias).                                                                                   |
+| Método                   | Descripción                                                                                 |
+| ------------------------ | ------------------------------------------------------------------------------------------- |
+| `len(str)`               | Devuelve la longitud de la cadena.                                                          |
+| `str.lower()`            | Devuelve una copia de la cadena en minúsculas.                                              |
+| `str.upper()`            | Devuelve una copia de la cadena en mayúsculas.                                              |
+| `str.capitalize()`       | Devuelve una copia de la cadena con la primera letra en mayúscula.                          |
+| `str.title()`            | Devuelve una copia de la cadena con cada palabra en mayúscula.                              |
+| `str.strip()`            | Elimina los espacios en blanco al principio y al final de la cadena.                        |
+| `str.lstrip()`           | Elimina los espacios en blanco al principio de la cadena.                                   |
+| `str.rstrip()`           | Elimina los espacios en blanco al final de la cadena.                                       |
+| `str.startswith(prefix)` | Verifica si la cadena comienza con el prefijo dado (p es la longitud del prefijo).          |
+| `str.endswith(suffix)`   | Verifica si la cadena termina con el sufijo dado (s es la longitud del sufijo).             |
+| `str.find(substring)`    | Busca la primera aparición de la subcadena y devuelve la posición, o -1 si no se encuentra. |
+| `str.replace(old, new)`  | Reemplaza todas las ocurrencias de la subcadena antigua con la nueva.                       |
+| `str.split(sep)`         | Divide la cadena en una lista de subcadenas usando el separador dado.                       |
+| `str.isalpha()`          | Devuelve `True` si todos los caracteres de la cadena son letras.                            |
+| `str.isdigit()`          | Devuelve `True` si todos los caracteres de la cadena son dígitos.                           |
+| `str.isalnum()`          | Devuelve `True` si todos los caracteres de la cadena son alfanuméricos.                     |
+| `str.islower()`          | Devuelve `True` si todos los caracteres de la cadena están en minúsculas.                   |
+| `str.isupper()`          | Devuelve `True` si todos los caracteres de la cadena están en mayúsculas.                   |
+| `str.capitalize()`       | Devuelve una copia de la cadena con la primera letra en mayúscula.                          |
+| `str.count(substring)`   | Cuenta el número de ocurrencias de la subcadena en la cadena .                              |
 
 ### Tabla ASCII
 
@@ -881,53 +882,30 @@ int main(){
 ##### Python
 
 ```python
-from collections import defaultdict
-# This class represents a directed graph using adjacency list representation
-class Graph:
+def iterative_dfs(graph, start):
+    stack = [start]
+    visited = set()
 
-	# Constructor
-	def __init__(self):
-		# Default dictionary to store graph
-		self.graph = defaultdict(list)
+    while stack:
+        current = stack.pop()
+        if current not in visited:
+            visited.add(current)
+            for neighbor in graph.get(current, []):
+                stack.append(neighbor)
 
-	# Function to add an edge to graph
-	def addEdge(self, u, v):
-		self.graph[u].append(v)
+    return visited
 
-	# A function used by DFS
-	def DFSUtil(self, v, visited):
+graph = {
+    'A': ['B', 'C'],
+    'B': ['A', 'D', 'E'],
+    'C': ['A', 'F'],
+    'D': ['B'],
+    'E': ['B', 'F'],
+    'F': ['C', 'E']
+}
 
-		# Mark the current node as visited and print it
-		visited.add(v)
-		print(v, end=' ')
-
-		# Recur for all the vertices adjacent to this vertex
-		for neighbour in self.graph[v]:
-			if neighbour not in visited:
-				self.DFSUtil(neighbour, visited)
-
-	# The function to do DFS traversal. It uses recursive DFSUtil()
-	def DFS(self, v):
-		# Create a set to store visited vertices
-		visited = set()
-		# Call the recursive helper function to print DFS traversal
-		self.DFSUtil(v, visited)
-
-# Driver's code
-if __name__ == "__main__":
-	g = Graph()
-	g.addEdge(0, 1)
-	g.addEdge(0, 2)
-	g.addEdge(1, 2)
-	g.addEdge(2, 0)
-	g.addEdge(2, 3)
-	g.addEdge(3, 3)
-
-	print("Following is Depth First Traversal (starting from vertex 2)")
-
-	# Function call
-	g.DFS(2)
-
+visited = iterative_dfs(graph, 'A')
+print(visited)  # Output: {'A', 'C', 'F', 'E', 'B', 'D'}
 ```
 
 ---
@@ -941,7 +919,7 @@ Es un algoritmo de búsqueda de caminos mínimos utilizados para encontrar el ca
 -   Temporal:
     -   La complejidad temporal es de O(V²)
 -   Espacial:
-    -   La complejiadd espacial es de O(V+E)
+    -   La complejidad espacial es de O(V+E)
 
 ##### C++
 
@@ -1015,6 +993,35 @@ if __name__ == "__main__":
 			]
 
 	g.dijkstra(0)
+```
+
+```python
+import heapq
+
+def dijkstra(graph, start):
+    queue = [(0, start, [])]
+    visited = set()
+    while queue:
+        (cost, current, path) = heapq.heappop(queue)
+        if current not in visited:
+            visited.add(current)
+            path = path + [current]
+            for neighbor, edge_cost in graph[current].items():
+                heapq.heappush(queue, (cost + edge_cost, neighbor, path))
+    return visited
+
+# Example usage:
+graph = {
+    'A': {'B': 1, 'C': 3},
+    'B': {'A': 1, 'D': 2, 'E': 3},
+    'C': {'A': 3, 'F': 5},
+    'D': {'B': 2},
+    'E': {'B': 3, 'F': 4},
+    'F': {'C': 5, 'E': 4},
+}
+
+visited = dijkstra(graph, 'A')
+print(visited)  # Output: {'A', 'B', 'C', 'D', 'E', 'F'}
 ```
 
 ---
@@ -1117,59 +1124,33 @@ int main(){
 ##### Python
 
 ```python
-# Number of vertices in the graph
-V = 4
+def floyd_warshall(graph):
+    n = len(graph)
+    dist = [[float('inf')] * n for _ in range(n)]
 
-# Define infinity as the large enough value. This value will be used for vertices not connected to each other
-INF = 99999
+    for i in range(n):
+        for j in range(n):
+            dist[i][j] = graph[i][j]
 
-# Solves all pair shortest path via Floyd Warshall Algorithm
-def floydWarshall(graph):
-	""" dist[][] will be the output  matrix that will finally have the shortest distances
-		between every pair of vertices """
+    for k in range(n):
+        for i in range(n):
+            for j in range(n):
+                dist[i][j] = min(dist[i][j], dist[i][k] + dist[k][j])
 
-	""" initializing the solution matrix same as input graph matrix OR we can say that the initial
-	values of shortest distances are based on shortest paths considering no intermediate vertices """
+    return dist
 
-	dist = list(map(lambda i: list(map(lambda j: j, i)), graph))
+# Example usage:
+graph = {
+    'A': {'B': 1, 'C': 3},
+    'B': {'A': 1, 'D': 2, 'E': 3},
+    'C': {'A': 3, 'F': 5},
+    'D': {'B': 2},
+    'E': {'B': 3, 'F': 4},
+    'F': {'C': 5, 'E': 4},
+}
 
-	""" Add all vertices one by one to the set of intermediate vertices.
-	---> Before start of an iteration, we have shortest distances between all pairs of vertices
-	such that the shortest distances consider only the vertices in the set
-	{0, 1, 2, .. k-1} as intermediate vertices.
-    ----> After the end of a iteration, vertex no. k is added to the set of intermediate
-	vertices and the set becomes {0, 1, 2, .. k}
-	"""
-	for k in range(V):
-		# pick all vertices as source one by one
-		for i in range(V):
-			# Pick all vertices as destination for the above picked source
-			for j in range(V):
-				# If vertex k is on the shortest path from i to j, then update the value of dist[i][j]
-				dist[i][j] = min(dist[i][j],
-								dist[i][k] + dist[k][j]
-								)
-	return dist
-
-
-# Driver's code
-if __name__ == "__main__":
-	"""
-				10
-		(0)------->(3)
-			|		 /|\
-		5 |		 |
-			|		 | 1
-		\|/		 |
-		(1)------->(2)
-				3		 """
-	graph = [[0, 5, INF, 10],
-			[INF, 0, 3, INF],
-			[INF, INF, 0, 1],
-			[INF, INF, INF, 0]
-			]
-	# Function call
-	dist = floydWarshall(graph)
+dist = floyd_warshall(graph)
+print(dist)
 ```
 
 ---
@@ -1448,3 +1429,6 @@ $$
 
 **Principio de Inclusión-Exclusión**
 $$ |A \cup B \cup C| = |A| + |B| + |C| - |A \cap B| - |A \cap C| - |B \cap C| + |A \cap B \cap C| $$
+
+**MCD**
+$$ \text{mcm}(a, b) = \frac{|a \cdot b|}{\text{mcd}(a, b)} $$
